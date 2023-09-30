@@ -19,10 +19,8 @@ from pytest import hookimpl
 
 from pytest_randomly.compat import md5
 
-if sys.version_info < (3, 10):
-    from importlib_metadata import entry_points
-else:
-    from importlib.metadata import entry_points
+
+from importlib_metadata import entry_points
 
 try:
     import xdist
